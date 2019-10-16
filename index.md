@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 ---
 
 # python3.7 datetime
