@@ -10,25 +10,25 @@ layout: default
  import time
  import datetime
 
- # 获取当前时间
- now_date_time = datetime.datetime.now()  # 格式为2019-02-06 11:47:36.406318
+ # get current time 
+ now_date_time = datetime.datetime.now()  
 
- # 格式化
+ # format datetime by format string
  now_str = now_date_time.strftime("%Y/%m/%d %H:%M:%S")
 
- # 字符串日期转datetime
+ # change date string to datetime
  str_2_datetime = datetime.datetime.strptime("2019-10-16 12:55:66", "%Y/%m/%d %H:%M:%S")
 
- # 获取当前时间时间戳 
+ # get current timestamp
  now_timestamp=time.time()
 
- # 字符串日期转时间戳
+ # change date string to timestamp
  str_2_timestamp = time.mktime(time.strptime("2019-10-16 12:55:66", "%Y/%m/%d %H:%M:%S"))
 
- # 时间戳转datetime格式
+ # timestamp to datetime
  timestamp_2_datetime = datetime.datetime.fromtimestamp(str_2_timestamp)
 
- # UTC日期转本地时间， 中国时区 +8
+ # utc to string local date
  utc_date = datetime.datetime.strptime(utc_str ,"%Y-%m-%dT%H:%M:%SZ")
  local_date = utc_date + datetime.timedelta(hours=8)
  local_date_str = datetime.datetime.strftime(local_date, fmt)
