@@ -1,123 +1,36 @@
 ---
-layout: default
+layout: post
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
-
-[Link to another page](./another-page.html).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+# python3.7 datetime
 
 
-### Definition lists can be used with HTML syntax.
+```python
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+ import time
+ import datetime
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+ # 获取当前时间
+ now_date_time = datetime.datetime.now()  # 格式为2019-02-06 11:47:36.406318
 
-```
-The final element.
+ # 格式化
+ now_str = now_date_time.strftime("%Y/%m/%d %H:%M:%S")
+
+ # 字符串日期转datetime
+ str_2_datetime = datetime.datetime.strptime("2019-10-16 12:55:66", "%Y/%m/%d %H:%M:%S")
+
+ # 获取当前时间时间戳 
+ now_timestamp=time.time()
+
+ # 字符串日期转时间戳
+ str_2_timestamp = time.mktime(time.strptime("2019-10-16 12:55:66", "%Y/%m/%d %H:%M:%S"))
+
+ # 时间戳转datetime格式
+ timestamp_2_datetime = datetime.datetime.fromtimestamp(str_2_timestamp)
+
+ # UTC日期转本地时间， 中国时区 +8
+ utc_date = datetime.datetime.strptime(utc_str ,"%Y-%m-%dT%H:%M:%SZ")
+ local_date = utc_date + datetime.timedelta(hours=8)
+ local_date_str = datetime.datetime.strftime(local_date, fmt)
+
 ```
