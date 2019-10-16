@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # python3.7 datetime
 
 
